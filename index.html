@@ -1,95 +1,98 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Google Forms</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-    <form
-  action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYc85jc39S1KswLZ10aX6okWp_xvp20al1WNTYqfkqNc6hTw/formResponse"
-  target="_self"
-  method="POST"
-  id="mG61Hd"
-  jsmodel="TOfxwf Q91hve CEkLOc"
-  data-shuffle-seed="3953797017996089640"
-  data-response="%.@.[]]"
-  data-first-entry="0"
-  data-last-entry="4"
-  data-is-first-page="true"
->
-
-
-<div class="form-wrapper">
-
-
-  <div class="bl_form_wrap">
-    <div class="bl_form_item">
-      <label for="inputMail">メールアドレス <em>*</em></label>
-      <!-- nameにの値はGoogleFormから取得 -->
-      <input
-        id="inputMail"
-        name="entry.123456789"
-        required
-        placeholder="example@mail.com"
-        type="email"
-      />
-    </div>
-    <div class="bl_form_item">
-      <label for="inputName">氏名 <em>*</em></label>
-      <!-- nameにの値はGoogleFormから取得 -->
-      <input
-        id="inputName"
-        name="entry.123456789"
-        required
-        placeholder="例）山田　太郎"
-      />
-    </div>
-    <div class="bl_form_item">
-      <label for="inputMessage">お問い合わせ内容 <em>*</em></label>
-      <!-- nameにの値はGoogleFormから取得 -->
-      <textarea
-        id="inputMessage"
-        name="entry.123456789"
-        placeholder="お問い合わせ内容を入力"
-        required
-      ></textarea>
-    </div>
-    <div class="bl_form_item">
-      <label>
-        <input
-          id="js-agree"
-          name="agree"
-          required
-          type="checkbox"
-          value="1"
-        />
-        <span
-          >個人情報の取り扱いに関しては<a href="./privacy/"
-            >プライバシーポリシー</a
-          >をお読みいただき、同意のうえお問い合わせください。</span
-        >
-      </label>
-      <p>※当フォームをご利用の際には、ご同意いただく必要があります。</p>
-    </div>
-  </div>
-  <div class="bl_form_button">
-    <button class="bl_form_send" type="submit">送信</button>
-  </div>
-  <!-- nameにの値はGoogleFormから取得 -->
-  <!-- data-sitekeyにreCAPTCHAのsitekeyを入力 -->
-  <input
-    id="recap"
-    name="entry.123456789"
-    type="hidden"
-    value=""
-    data-sitekey="yyyyyyyyyyyyyyyyyyyyyy"
-  />
-</div>
-
-</form>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Test Google Forms</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://www.google.com/recaptcha/api.js?render=6LeY1LkmAAAAAKlLB_-uuGHRPRnuTJ1aaqwrXBU9"></script>
+	</head>
+	<body>
+		<div class="bl_contact">
+			<!-- Google Formのactionの値を入力 -->
+			<!-- targetにダミーのiframeを指定 -->
+			<form
+				action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYc85jc39S1KswLZ10aX6okWp_xvp20al1WNTYqfkqNc6hTw/formResponse"
+				class="bl_form"
+				method="post"
+				name="customForm"
+				target="dummyIframe"
+			>
+				<div class="bl_form_wrap">
+					<div class="bl_form_item">
+						<label for="inputMail">メールアドレス <em>*</em></label>
+						<!-- nameにの値はGoogleFormから取得 -->
+						<input
+							id="inputMail"
+							name="entry.1616452523"
+							required
+							placeholder="example@mail.com"
+							type="email"
+						/>
+					</div>
+					<div class="bl_form_item">
+						<label for="inputName">氏名 <em>*</em></label>
+						<!-- nameにの値はGoogleFormから取得 -->
+						<input
+							id="inputName"
+							name="entry.1605456779"
+							required
+							placeholder="例）山田　太郎"
+						/>
+					</div>
+					<div class="bl_form_item">
+						<label for="inputMessage">お問い合わせ内容 <em>*</em></label>
+						<!-- nameにの値はGoogleFormから取得 -->
+						<textarea
+							id="inputMessage"
+							name="entry.1131972973"
+							placeholder="お問い合わせ内容を入力"
+							required
+						></textarea>
+					</div>
+					<div class="bl_form_item">
+						<label>
+							<input
+								id="js-agree"
+								name="agree"
+								required
+								type="checkbox"
+								value="1"
+							/>
+							<span
+								>個人情報の取り扱いに関しては<a href="./privacy/"
+									>プライバシーポリシー</a
+								>をお読みいただき、同意のうえお問い合わせください。</span
+							>
+						</label>
+						<p>※当フォームをご利用の際には、ご同意いただく必要があります。</p>
+					</div>
+				</div>
+				<div class="bl_form_button">
+					<button class="bl_form_send" type="submit">送信</button>
+				</div>
+				<!-- nameにの値はGoogleFormから取得 -->
+				<!-- data-sitekeyにreCAPTCHAのsitekeyを入力 -->
+				<input
+					id="recap"
+					name="entry.1632421315"
+					type="hidden"
+					value=""
+					data-sitekey="6LeY1LkmAAAAAKlLB_-uuGHRPRnuTJ1aaqwrXBU9"
+				/>
+			</form>
+			<!-- 送信後、遷移させないためのiframeを用意 -->
+			<iframe name="dummyIframe" style="display: none"></iframe>
+			<!-- 送信完了後のメッセージ -->
+			<div class="bl_form_message">
+				<p>お問い合わせの送信が完了しました。</p>
+				<p>この度はお問い合わせをいただきまして、誠にありがとうございます。</p>
+				<p>
+					お問い合わせ内容を確認しまして、担当者よりご連絡をさせていただきます。
+				</p>
+				<p>今しばらくお待ちくださいませ。</p>
+			</div>
+		</div>
+    <script src="main.js"></script>
+	</body>
 </html>
