@@ -35,5 +35,5 @@ function onSubmit(token) {
     // ここでフォームの送信などの処理を行います
   }
   grecaptcha.ready(function() {
-    grecaptcha.execute('サイトキー', { action: 'submit' }).then(onSubmit);
+    grecaptcha.execute('6LeY1LkmAAAAAKlLB_-uuGHRPRnuTJ1aaqwrXBU9', { action: 'submit' }).then(onSubmit);
   });
