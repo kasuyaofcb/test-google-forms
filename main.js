@@ -53,11 +53,6 @@ function loadRecaptcha() {
   });
 }
 
-// クリックイベントで reCAPTCHA を読み込むように設定
-document.querySelector('.bl_form_button').addEventListener('click', function(e) {
-  e.preventDefault(); // クリックイベントのデフォルト動作を停止
-  loadRecaptcha(); // reCAPTCHA を読み込む
-});
 
 // フォームの送信イベントで reCAPTCHA を読み込むように設定
 document.querySelector('.bl_form').addEventListener('submit', function(e) {
