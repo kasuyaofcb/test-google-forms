@@ -20,7 +20,7 @@ document.querySelector('.bl_form').addEventListener('submit', function(e) {
     grecaptcha.execute(siteKey, { action: 'submit' }).then(function(token) {
       // reCAPTCHAを実行
       document.getElementById('recap').value = token; // 戻り値tokenを#recapに格納
-      document.querySelector('.bl_form').removeEventListener('submit', handleFormSubmit); // イベントリスナーの削除
+      document.querySelector('.bl_form').removeEventListener('submit', arguments.callee); // イベントリスナーの削除
       document.querySelector('.bl_form').submit(); // formをsubmit
       document.querySelector('.bl_form_message').style.display = 'block'; // 送信後メッセージを表示
     });
