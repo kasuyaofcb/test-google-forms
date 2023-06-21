@@ -26,14 +26,68 @@
 <div class="form-wrapper">
 
 
-<label for="e-mail"></label>メールアドレス
-<input type="text" id="e-mail"><br>
-
-<label for="name"></label>氏名
-<input type="text" id="name"><br>
-
-<label for="text"></label>お問い合わせ
-<input type="text" id="text"><br>
+  <div class="bl_form_wrap">
+    <div class="bl_form_item">
+      <label for="inputMail">メールアドレス <em>*</em></label>
+      <!-- nameにの値はGoogleFormから取得 -->
+      <input
+        id="inputMail"
+        name="entry.123456789"
+        required
+        placeholder="example@mail.com"
+        type="email"
+      />
+    </div>
+    <div class="bl_form_item">
+      <label for="inputName">氏名 <em>*</em></label>
+      <!-- nameにの値はGoogleFormから取得 -->
+      <input
+        id="inputName"
+        name="entry.123456789"
+        required
+        placeholder="例）山田　太郎"
+      />
+    </div>
+    <div class="bl_form_item">
+      <label for="inputMessage">お問い合わせ内容 <em>*</em></label>
+      <!-- nameにの値はGoogleFormから取得 -->
+      <textarea
+        id="inputMessage"
+        name="entry.123456789"
+        placeholder="お問い合わせ内容を入力"
+        required
+      ></textarea>
+    </div>
+    <div class="bl_form_item">
+      <label>
+        <input
+          id="js-agree"
+          name="agree"
+          required
+          type="checkbox"
+          value="1"
+        />
+        <span
+          >個人情報の取り扱いに関しては<a href="./privacy/"
+            >プライバシーポリシー</a
+          >をお読みいただき、同意のうえお問い合わせください。</span
+        >
+      </label>
+      <p>※当フォームをご利用の際には、ご同意いただく必要があります。</p>
+    </div>
+  </div>
+  <div class="bl_form_button">
+    <button class="bl_form_send" type="submit">送信</button>
+  </div>
+  <!-- nameにの値はGoogleFormから取得 -->
+  <!-- data-sitekeyにreCAPTCHAのsitekeyを入力 -->
+  <input
+    id="recap"
+    name="entry.123456789"
+    type="hidden"
+    value=""
+    data-sitekey="yyyyyyyyyyyyyyyyyyyyyy"
+  />
 </div>
 
 </form>
