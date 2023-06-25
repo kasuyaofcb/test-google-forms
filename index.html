@@ -11,91 +11,156 @@
 
 	</head>
 	<body>
-		<div class="bl_contact">
-			<!-- Google Formのactionの値を入力 -->
-			<!-- targetにダミーのiframeを指定 -->
-			<form
-				action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeYc85jc39S1KswLZ10aX6okWp_xvp20al1WNTYqfkqNc6hTw/formResponse"
-				class="bl_form"
-				method="post"
-				name="customForm"
-				target="dummyIframe"
-			>
-				<div class="bl_form_wrap">
-					<div class="bl_form_item">
-						<label for="inputMail">メールアドレス <em>*</em></label>
-						<!-- nameにの値はGoogleFormから取得 -->
-						<input
-							id="inputMail"
-							name="entry.1616452523"
-							required
-							placeholder="example@mail.com"
-							type="email"
-						/>
-					</div>
-					<div class="bl_form_item">
-						<label for="inputName">氏名 <em>*</em></label>
-						<!-- nameにの値はGoogleFormから取得 -->
-						<input
-							id="inputName"
-							name="entry.1605456779"
-							required
-							placeholder="例）山田　太郎"
-						/>
-					</div>
-					<div class="bl_form_item">
-						<label for="inputMessage">お問い合わせ内容 <em>*</em></label>
-						<!-- nameにの値はGoogleFormから取得 -->
-						<textarea
-							id="inputMessage"
-							name="entry.1131972973"
-							placeholder="お問い合わせ内容を入力"
-							required
-						></textarea>
-					</div>
-					<div class="bl_form_item">
-						<label>
-							<input
-								id="js-agree"
-								name="agree"
-								required
-								type="checkbox"
-								value="1"
-							/>
-							<span
-								>個人情報の取り扱いに関しては<a href="./privacy/"
-									>プライバシーポリシー</a
-								>をお読みいただき、同意のうえお問い合わせください。</span
-							>
-						</label>
-						<p>※当フォームをご利用の際には、ご同意いただく必要があります。</p>
-					</div>
-				</div>
-				<div class="bl_form_button">
-					<button class="bl_form_send" type="submit">送信</button>
-				</div>
-				<!-- nameにの値はGoogleFormから取得 -->
-				<!-- data-sitekeyにreCAPTCHAのsitekeyを入力 -->
-				<input
-					id="recap"
-					name="entry.1632421315"
-					type="hidden"
-					value=""
-					data-sitekey="6LeY1LkmAAAAAKlLB_-uuGHRPRnuTJ1aaqwrXBU9"
-				/>
-			</form>
-			<!-- 送信後、遷移させないためのiframeを用意 -->
-			<iframe name="dummyIframe" style="display: none"></iframe>
-			<!-- 送信完了後のメッセージ -->
-			<div class="bl_form_message">
-				<p>お問い合わせの送信が完了しました。</p>
-				<p>この度はお問い合わせをいただきまして、誠にありがとうございます。</p>
-				<p>
-					お問い合わせ内容を確認しまして、担当者よりご連絡をさせていただきます。
-				</p>
-				<p>今しばらくお待ちくださいませ。</p>
-			</div>
-		</div>
+
+        <main class="pageForm">
+            <div class="pageForm__titleWrapper">
+                <h1>お問い合わせ</h1>
+                <p>入塾説明、無料体験指導、その他お問い合わせをご希望の方は<br class="pageForm__brPc">
+                    こちらよりお問い合わせください。</p>
+            </div>
+
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
+
+            <form class="pageForm__form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyOHlwcAcYTC9qapjB2rMwsc0AaUcbJKauCJBjYiezLeKqYg/formResponse" name="pageForm" target="hidden_iframe" onsubmit="submitted=true;" novalidate>
+                <div class="pageForm__wrapper pageForm__wrapper--corse">
+                    <div class="pageForm__item pageForm__item--class">
+                        <label class="pageForm__itemLabel" for="">通塾希望教室<span>必須</span></label>
+                        <div class="pageForm__itemContents">
+                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="takadanobaba">
+                                <input type="radio" name="entry.2130595402" id="takadanobaba" value="<?php echo CLASS_INFO['takadanobaba']['name']; ?>教室" class="pageForm__valiClass" required><span><?php echo CLASS_INFO['takadanobaba']['name']; ?>教室</span>
+                            </label>
+                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="nasushiobara">
+                                <input type="radio" name="entry.2130595402" id="nasushiobara" value="<?php echo CLASS_INFO['nasushiobara']['name']; ?>教室" class="pageForm__valiClass"><span> <?php echo CLASS_INFO['nasushiobara']['name']; ?>教室</span>
+                            </label>
+                        </div>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+                    <div class="pageForm__item pageForm__item--corse">
+                        <label class="pageForm__itemLabel" for="">希望コース<span>必須</span></label>
+                        <select name="entry.1397589927" class="pageForm__itemChoice pageForm__itemChoice--valiSelect pageForm__itemChoice--redBorder pageForm__itemChoice--course pageForm__itemChoice--bgDarkGrey" disabled>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--def" required>-- 教室を選択するとコースが表示されます --</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="定期テスト対策コース" required>定期テスト対策コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="高校入試対策コース" required>高校入試対策コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="小学生通常コース" required>小学生通常コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka" value="小学生プログラミング教室" required>小学生プログラミング教室</option>
+                        </select>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+                    <div class="pageForm__item pageForm__item--request pageForm__item--bottom">
+                        <label class="pageForm__itemLabel" for="">お問い合わせ要件（複数選択可）<span>必須</span></label>
+                        <div class="pageForm__itemContents">
+                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="入塾説明">
+                                <input type="checkbox" name="entry.97847456" id="入塾説明" value="入塾説明" class="pageForm__valiRequirement1" required><span>入塾説明</span>
+                            </label>
+                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="体験授業">
+                                <input type="checkbox" name="entry.97847456" id="体験授業" value="体験授業" class="pageForm__valiRequirement2"><span>体験授業</span>
+                            </label>
+                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="その他">
+                                <input type="checkbox" name="entry.97847456" id="その他" value="その他" class="pageForm__valiRequirement3"><span>その他</span>
+                            </label>
+                        </div>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+                </div>
+
+                <div class="pageForm__wrapper pageForm__wrapper--userInfo">
+                    <h2>お客さま情報</h2>
+                    <div class="pageForm__item pageForm__item--grade">
+                        <label class="pageForm__itemLabel" for="">学年<span>必須</span></label>
+                        <select name="entry.185081532" class="pageForm__itemChoice pageForm__itemChoice--valiSelect pageForm__itemChoice--redBorder">
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--def" required>--選択してください--</option>
+                            <option class="pageForm__itemChoiceOption" value="小学1年生" required>小学1年生</option>
+                            <option class="pageForm__itemChoiceOption" value="小学2年生" required>小学2年生</option>
+                            <option class="pageForm__itemChoiceOption" value="小学3年生" required>小学3年生</option>
+                            <option class="pageForm__itemChoiceOption" value="小学4年生" required>小学4年生</option>
+                            <option class="pageForm__itemChoiceOption" value="小学5年生" required>小学5年生</option>
+                            <option class="pageForm__itemChoiceOption" value="小学6年生" required>小学6年生</option>
+                            <option class="pageForm__itemChoiceOption" value="中学1年生" required>中学1年生</option>
+                            <option class="pageForm__itemChoiceOption" value="中学2年生" required>中学2年生</option>
+                            <option class="pageForm__itemChoiceOption" value="中学3年生" required>中学3年生</option>
+                            <option class="pageForm__itemChoiceOption" value="その他" required>その他</option>
+                        </select>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+
+
+                    <div class="pageForm__item pageForm__item--inputText">
+                        <label class="pageForm__itemLabel" for="name">生徒氏名<span>必須</span></label>
+                        <input type="text" name="entry.1206804049" value="" placeholder="(例)　メイツ太郎" class="pageForm__itemChoice pageForm__itemChoice--inputText pageForm__itemChoice--redBorder" required>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+
+
+                    <div class="pageForm__item pageForm__item--inputText">
+                        <label class="pageForm__itemLabel" for="school">学校名<span>必須</span></label>
+                        <input type="text" name="entry.2028249914" value="" placeholder="(例)　メイツ中学校" class="pageForm__itemChoice pageForm__itemChoice--inputText pageForm__itemChoice--redBorder" required>
+                        <p class="pageForm__valiText">入力してください</p>
+                    </div>
+
+                    <div class="pageForm__item pageForm__item--mail">
+                        <label class="pageForm__itemLabel" for="email">メールアドレス<span>必須</span></label>
+                        <input type="email" name="emailAddress" value="" placeholder="(例)　example@mail.com" class="pageForm__itemChoice pageForm__itemChoice--redBorder pageForm__itemChoice--valiMail" required>
+                        <p class="pageForm__valiText pageForm__valiText--mail">入力してください</p>
+                    </div>
+
+                    <div class="pageForm__item pageForm__item--tel pageForm__item--bottom">
+                        <label class="pageForm__itemLabel" for="tel">お電話番号<span>必須</span></label>
+                        <input type="tel" name="entry.775583223" value="" placeholder="(例)　0332321050" class="pageForm__itemChoice pageForm__itemChoice--redBorder pageForm__itemChoice--valiMail--tel pageForm__itemChoice--valiTel" required>
+                        <p class="pageForm__valiText pageForm__valiText--tel">入力してください</p>
+                    </div>
+
+                </div>
+
+                <div class="pageForm__wrapper pageForm__wrapper--date">
+                    <h2>入塾説明・体験授業の希望日時</h2>
+
+                    <div class="pageForm__item pageForm__item--date1">
+                        <label class="pageForm__itemLabel" for="">第1希望日時</label>
+                        <input type="text" name="entry.889690090" value="" placeholder="例：2022/11/1　15:30~16:30" class="pageForm__itemChoice">
+                    </div>
+
+                    <div class="pageForm__item pageForm__item--date2">
+                        <label class="pageForm__itemLabel" for="">第2希望日時</label>
+                        <input type="text" name="entry.2036873195" value="" placeholder="例：2022/11/1　15:30~16:30" class="pageForm__itemChoice">
+                    </div>
+                    <div class="pageForm__item pageForm__item--date3 pageForm__item--bottom">
+                        <label class="pageForm__itemLabel" for="">第3希望日時</label>
+                        <input type="text" name="entry.747536895" value="" placeholder="例：2022/11/1　15:30~16:30" class="pageForm__itemChoice">
+                    </div>
+                </div>
+
+                <div class="pageForm__wrapper pageForm__wrapper--detail">
+                    <h2>お問い合わせ内容</h2>
+                    <div class="pageForm__formDetailTitleSub">
+                        <p>
+                            ご紹介の場合は、お友達（ご紹介者）のお名前をご記入ください。
+                        </p>
+                    </div>
+                    <div class="pageForm__item pageForm__item--detail">
+                        <textarea type="text" name="entry.1022486175" value="" placeholder="お子さまの現状やお悩みなどご自由にご記入ください。" class="pageForm__itemChoice"></textarea>
+                    </div>
+                </div>
+
+                <div class="pageForm__item pageForm__item--privacy">
+                    <label class="pageForm__itemChoice pageForm__itemChoice--privacy pageForm__itemChoice--redBorder pageForm__itemChoice--btn">
+                        <input type="checkbox" name="entry.253370148" id="pageForm__agree" value="同意する" class="pageForm__valiPrivacy" required>
+                        <p>「個人情報の取扱について」に同意する</p><span>必須</span>
+                    </label>
+                    <p class="pageForm__valiText">入力してください</p>
+                    <p class="pageForm__privacyText"><a href="#" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>をお読みの上、チェックをお願いしたします。内容にご同意いただけない場合は、申し訳ございませんがお問い合わせいただけません。ご了承ください。</p>
+
+                </div>
+                <input type="submit" class="pageForm__submitBtn" value="送信" data-sitekey="6Ld2F8cmAAAAAGmB7LfVZEM8vExGFPkfwjINfB_Y">
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='#';}"></iframe>
+        </main>
+
+
+
+
+
     <script src="main.js"></script>
 	</body>
 </html>

@@ -1,10 +1,206 @@
-.form-wrapper{
-    display: flex;
-    flex-direction: column;
-    row-gap: 24px;
+
+/***********************************************
+| お問い合わせ(ファイル名: page-form.php)
+***********************************************/
+.pageForm {
+  max-width: 764px;
+  margin: 0 auto;
+  padding: 96px 32px 120px;
+
+  h1 {
+    font-weight: 600;
+    text-align: center;
+
+  }
+
+  h2 {
+    font-weight: 600;
+
+  }
 }
 
-label,
-input{
-    width: 200px;
+.pageForm__titleWrapper {
+  position: relative;
+
+
+  p {
+    font-weight: 300;
+
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+.pageForm__wrapper {
+
+  position: relative;
+
+  textarea {
+    min-height: 166px;
+    font-weight: 300;
+  }
+}
+
+
+
+.pageForm__itemContents {
+  display: flex;
+
+
+}
+
+
+
+.pageForm__item--bottom {
+  margin-bottom: 0;
+}
+
+.pageForm__itemChoice {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+.pageForm__itemChoice--btn {
+  cursor: pointer;
+
+}
+
+.pageForm__itemChoice--privacy {
+  max-width: 412px;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 0;
+
+
+}
+
+
+
+.pageForm__itemLabel {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+
+
+
+
+  span {
+    white-space: nowrap;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+.pageForm__dateTopTextPc {
+  display: flex;
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.pageForm__dateTopTextBottomPc {
+
+  display: flex;
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+.pageForm__dateTopTextSp {
+  display: none;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.pageForm__dateTopTextBottomSp {
+  display: none;
+
+  span {
+    font-weight: 600;
+  }
+  .pageForm__time {
+    font-weight: 300;
+  }
+}
+
+.pageForm__formDetailTitleSub p {
+  font-style: normal;
+  font-weight: 300;
+
+}
+
+.pageForm__privacyText {
+
+  font-weight: 300;
+
+  a {
+    text-decoration-line: underline;
+
+  }
+}
+
+.pageForm__submitBtn {
+  cursor: pointer;
+  width: 400px;
+
+  font-weight: 600;
+  border: none;
+  display: flex;
+  justify-content: center;
+
+
+  &:hover {
+    box-shadow: none;
+    top: 0;
+  }
+}
+
+.pageForm__valiText {
+  display: none;
+}
+
+.pageForm__item--valiOn {
+  .pageForm__valiText {
+    display: none;
+    display: block;
+  }
+
+}
+
+.pageForm__wrapper--userInfo,
+.pageForm__wrapper--date {
+  .pageForm__item {
+  }
+  .pageForm__item--bottom {
+    margin: 0;
+  }
+}
+
+.pageForm__wrapper--detail {
+  h2 {
+  }
+
+  .pageForm__item {
+    margin-bottom: 0;
+  }
 }

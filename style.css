@@ -1,10 +1,153 @@
-.form-wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
+@charset "UTF-8";
+/***********************************************
+| お問い合わせ(ファイル名: page-form.php)
+***********************************************/
+.pageForm {
+  max-width: 764px;
+  margin: 0 auto;
+  padding: 96px 32px 120px;
+}
+.pageForm h1 {
+  font-weight: 600;
+  text-align: center;
+}
+.pageForm h2 {
+  font-weight: 600;
 }
 
-label,
-input {
-  width: 200px;
+.pageForm__titleWrapper {
+  position: relative;
+}
+.pageForm__titleWrapper p {
+  font-weight: 300;
+  text-align: center;
+}
+.pageForm__titleWrapper p span {
+  display: inline-block;
+}
+
+.pageForm__wrapper {
+  position: relative;
+}
+.pageForm__wrapper textarea {
+  min-height: 166px;
+  font-weight: 300;
+}
+
+.pageForm__itemContents {
+  display: flex;
+}
+
+.pageForm__item--bottom {
+  margin-bottom: 0;
+}
+
+.pageForm__itemChoice {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.pageForm__itemChoice--btn {
+  cursor: pointer;
+}
+
+.pageForm__itemChoice--privacy {
+  max-width: 412px;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.pageForm__itemLabel {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.pageForm__itemLabel span {
+  white-space: nowrap;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.pageForm__dateTopTextPc {
+  display: flex;
+}
+.pageForm__dateTopTextPc p {
+  font-style: normal;
+  font-weight: 300;
+}
+.pageForm__dateTopTextPc p span {
+  font-weight: 600;
+}
+
+.pageForm__dateTopTextBottomPc {
+  display: flex;
+}
+.pageForm__dateTopTextBottomPc p {
+  font-style: normal;
+  font-weight: 300;
+}
+.pageForm__dateTopTextBottomPc p span {
+  font-weight: 600;
+}
+
+.pageForm__dateTopTextSp {
+  display: none;
+}
+.pageForm__dateTopTextSp span {
+  font-weight: 600;
+}
+
+.pageForm__dateTopTextBottomSp {
+  display: none;
+}
+.pageForm__dateTopTextBottomSp span {
+  font-weight: 600;
+}
+.pageForm__dateTopTextBottomSp .pageForm__time {
+  font-weight: 300;
+}
+
+.pageForm__formDetailTitleSub p {
+  font-style: normal;
+  font-weight: 300;
+}
+
+.pageForm__privacyText {
+  font-weight: 300;
+}
+.pageForm__privacyText a {
+  text-decoration-line: underline;
+}
+
+.pageForm__submitBtn {
+  cursor: pointer;
+  width: 400px;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.pageForm__submitBtn:hover {
+  box-shadow: none;
+  top: 0;
+}
+
+.pageForm__valiText {
+  display: none;
+}
+
+.pageForm__item--valiOn .pageForm__valiText {
+  display: none;
+  display: block;
+}
+
+.pageForm__wrapper--userInfo .pageForm__item--bottom,
+.pageForm__wrapper--date .pageForm__item--bottom {
+  margin: 0;
+}
+
+.pageForm__wrapper--detail .pageForm__item {
+  margin-bottom: 0;
 }
