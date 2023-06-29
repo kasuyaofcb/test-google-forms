@@ -197,5 +197,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   function onSubmit(token) {
-    document.querySelector(".pageForm__form").submit();
+    document.querySelector(".pageForm__submitBtn").submit();
   }
