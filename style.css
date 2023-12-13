@@ -151,3 +151,7 @@
 .pageForm__wrapper--detail .pageForm__item {
   margin-bottom: 0;
 }
+
+.pageForm__valiText {
+  color: red;
+}

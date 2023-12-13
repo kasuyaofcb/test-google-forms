@@ -25,28 +25,17 @@
 
             <form class="pageForm__form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyOHlwcAcYTC9qapjB2rMwsc0AaUcbJKauCJBjYiezLeKqYg/formResponse" name="pageForm" target="hidden_iframe" onsubmit="submitted=true;" novalidate>
                 <div class="pageForm__wrapper pageForm__wrapper--corse">
-                    <div class="pageForm__item pageForm__item--class">
-                        <label class="pageForm__itemLabel" for="">通塾希望教室<span>必須</span></label>
-                        <div class="pageForm__itemContents">
-                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="takadanobaba">
-                                <input type="radio" name="entry.2130595402" id="takadanobaba" value="高田馬場教室" class="pageForm__valiClass" required><span>高田馬場教室</span>
-                            </label>
-                            <label class="pageForm__itemChoice pageForm__itemChoice--btn pageForm__itemChoice--redBorder" for="nasushiobara">
-                                <input type="radio" name="entry.2130595402" id="nasushiobara" value="那須塩原教室" class="pageForm__valiClass"><span> 那須塩原教室</span>
-                            </label>
-                        </div>
-                        <p class="pageForm__valiText">入力してください</p>
-                    </div>
+
                     <div class="pageForm__item pageForm__item--corse">
                         <label class="pageForm__itemLabel" for="">希望コース<span>必須</span></label>
-                        <select name="entry.1397589927" class="pageForm__itemChoice pageForm__itemChoice--valiSelect pageForm__itemChoice--redBorder pageForm__itemChoice--course pageForm__itemChoice--bgDarkGrey" disabled>
+                        <select name="entry.1397589927" class="pageForm__itemChoice pageForm__itemChoice--valiSelect pageForm__itemChoice--redBorder pageForm__itemChoice--course pageForm__itemChoice--bgDarkGrey">
                             <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--def" required>-- 教室を選択するとコースが表示されます --</option>
-                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="定期テスト対策コース" required>定期テスト対策コース</option>
-                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="高校入試対策コース" required>高校入試対策コース</option>
-                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka pageForm__itemChoiceOption--shio" value="小学生通常コース" required>小学生通常コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka" value="定期テスト対策コース" required>定期テスト対策コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka" value="高校入試対策コース" required>高校入試対策コース</option>
+                            <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka" value="小学生通常コース" required>小学生通常コース</option>
                             <option class="pageForm__itemChoiceOption pageForm__itemChoiceOption--taka" value="小学生プログラミング教室" required>小学生プログラミング教室</option>
                         </select>
-                        <p class="pageForm__valiText">入力してください</p>
+                        <p class="pageForm__valiText ">入力してください</p>
                     </div>
                     <div class="pageForm__item pageForm__item--request pageForm__item--bottom">
                         <label class="pageForm__itemLabel" for="">お問い合わせ要件（複数選択可）<span>必須</span></label>
@@ -86,29 +75,29 @@
                     </div>
 
 
-                    <div class="pageForm__item pageForm__item--inputText">
+                    <div class="pageForm__item pageForm__item--name pageForm__item--inputText">
                         <label class="pageForm__itemLabel" for="name">生徒氏名<span>必須</span></label>
-                        <input type="text" name="entry.1206804049" value="" placeholder="(例)　メイツ太郎" class="pageForm__itemChoice pageForm__itemChoice--inputText pageForm__itemChoice--redBorder" required>
-                        <p class="pageForm__valiText">入力してください</p>
+                        <input type="text" name="entry.1206804049" value="" placeholder="(例)　メイツ太郎" class="pageForm__itemChoice pageForm__itemChoice--valiName pageForm__itemChoice--inputText pageForm__itemChoice--redBorder" required>
+                        <p class="pageForm__valiText pageForm__valiText--name">入力してください</p>
                     </div>
 
 
-                    <div class="pageForm__item pageForm__item--inputText">
+                    <div class="pageForm__item pageForm__item--schoolName pageForm__item--inputText">
                         <label class="pageForm__itemLabel" for="school">学校名<span>必須</span></label>
-                        <input type="text" name="entry.2028249914" value="" placeholder="(例)　メイツ中学校" class="pageForm__itemChoice pageForm__itemChoice--inputText pageForm__itemChoice--redBorder" required>
-                        <p class="pageForm__valiText">入力してください</p>
+                        <input type="text" name="entry.2028249914" value="" placeholder="(例)　メイツ中学校" class="pageForm__itemChoice pageForm__itemChoice--inputText pageForm__itemChoice--valiSchoolName pageForm__itemChoice--redBorder" required>
+                        <p class="pageForm__valiText pageForm__valiText--schoolName">入力してください</p>
                     </div>
 
-                    <div class="pageForm__item pageForm__item--mail">
+                    <div class="pageForm__item pageForm__item--mail pageForm__item--mail">
                         <label class="pageForm__itemLabel" for="email">メールアドレス<span>必須</span></label>
                         <input type="email" name="entry.227072550" value="" placeholder="(例)　example@mail.com" class="pageForm__itemChoice pageForm__itemChoice--redBorder pageForm__itemChoice--valiMail" required>
-                        <p class="pageForm__valiText pageForm__valiText--mail">入力してください</p>
+                        <p class="pageForm__valiText pageForm__valiText--mail pageForm__valiText--mail">入力してください</p>
                     </div>
 
                     <div class="pageForm__item pageForm__item--tel pageForm__item--bottom">
                         <label class="pageForm__itemLabel" for="tel">お電話番号<span>必須</span></label>
-                        <input type="tel" name="entry.775583223" value="" placeholder="(例)　0332321050" class="pageForm__itemChoice pageForm__itemChoice--redBorder pageForm__itemChoice--valiMail--tel pageForm__itemChoice--valiTel" required>
-                        <p class="pageForm__valiText pageForm__valiText--tel">入力してください</p>
+                        <input type="tel" name="entry.775583223" value="" placeholder="(例)　0332321050" class="pageForm__itemChoice pageForm__itemChoice--redBorder pageForm__itemChoice--valiMail--tel pageForm__itemChoice--valiTel pageForm__itemChoice--valiTel" required>
+                        <p class="pageForm__valiText pageForm__valiText--tel pageForm__valiText--tel">入力してください</p>
                     </div>
 
                 </div>
@@ -162,6 +151,6 @@
 
 
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 	</body>
 </html>
