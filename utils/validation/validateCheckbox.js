@@ -6,3 +6,6 @@ export const validateCheckbox = (event, targetELe, targetValidOn, validClass) =>
     targetValidOn.classList.remove(validClass);
   }
 };
+
+
+// テスト環境

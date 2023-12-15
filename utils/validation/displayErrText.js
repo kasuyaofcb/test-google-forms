@@ -53,3 +53,5 @@ export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
 		}
 	}
 };
+
+// テスト環境
