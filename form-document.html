@@ -30,6 +30,7 @@
         <div class="pageDocumentForm__item pageDocumentForm__item--name">
             <label class="pageDocumentForm__itemLabel" for="name">生徒氏名<span>必須</span></label>
             <input type="text" name="entry.94253449" value="" placeholder="(例)　メイツ太郎" class="pageDocumentForm__itemChoice pageDocumentForm__itemChoice--valiName pageDocumentForm__itemChoice--redBorder" required>
+            <p class="pageForm__valiText pageDocumentForm__valiText--name">入力してください</p>
         </div>
 
         <div class="pageDocumentForm__item pageDocumentForm__item--grade">
@@ -52,20 +53,24 @@
         <div class="pageDocumentForm__item pageDocumentForm__item--tel">
             <label class="pageDocumentForm__itemLabel" for="tel">お電話番号<span>必須</span></label>
             <input type="tel" name="entry.1434049423" value="" placeholder="(例)　0332321050" class="pageDocumentForm__itemChoice pageDocumentForm__itemChoice--redBorder pageDocumentForm__itemChoice--valiTel" required>
+            <p class="pageForm__valiText pageDocumentForm__valiText--tel">入力してください</p>
         </div>
 
         <div class="pageDocumentForm__item pageDocumentForm__item--mail pageDocumentForm__item--bottom">
             <label class="pageDocumentForm__itemLabel" for="email">メールアドレス<span>必須</span></label>
             <input type="email" name="entry.1085347017" value="" placeholder="(例)　example@mail.com" class="pageDocumentForm__itemChoice pageDocumentForm__itemChoice--redBorder pageDocumentForm__itemChoice--valiMail" required>
+            <p class="pageForm__valiText pageDocumentForm__valiText--mail">入力してください</p>
         </div>
     </div>
 
     <div class="pageDocumentForm__wrapper pageDocumentForm__wrapper--pamphlet">
         <h2>紙パンフレットご希望の方</h2>
         <p class="pageDocumentForm__subTitleText">デジタルパンフレットと同じものを郵送させていただくことも可能です。希望する場合は郵便番号と住所をご入力ください。</p>
-        <div class="pageDocumentForm__item">
+        <div class="pageDocumentForm__item pageDocumentForm__item--post">
             <label class="pageDocumentForm__itemLabel" for="">郵便番号</label>
-            <input type="text" name="entry.2079823439" value="" placeholder="(例)　123-4567" class="pageDocumentForm__itemChoice">
+            <input type="text" name="entry.2079823439" value="" placeholder="(例)　123-4567" class="pageDocumentForm__itemChoice pageDocumentForm__itemChoice--valiPost">
+            <p class="pageForm__valiText pageDocumentForm__valiText--post">入力してください</p>
+
         </div>
 
         <div class="pageDocumentForm__item pageDocumentForm__item--bottom">
@@ -102,6 +107,6 @@
 
 
 
-    <script src="main.js"></script>
+    <script type="module" src="document.js"></script>
 	</body>
 </html>

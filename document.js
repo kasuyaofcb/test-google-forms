@@ -1,9 +1,10 @@
-import { displayErrText } from 'utils/validation/displayErrText.js';
-import { validateCheckbox } from 'utils/validation/validateCheckbox.js';
+import { displayErrText } from '/utils/validation/displayErrText.js';
+import { validateCheckbox } from '/utils/validation/validateCheckbox.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   // 正規表現を定義
-  const textRegex = /^[ぁ-んァ-ン一-龥々ーA-Za-z 　]*$/;
+  const textRegex = /^[ぁ-んァ-ン一-龥々ー ]*$/;
+  const postRegex = /^$|^\d{3}(-\d{4})?$|^\d{7}$/;
   const mailRegex = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
   const tellRegex = /^\(?\d{2,5}\)?[-(\.\s]{0,2}\d{1,4}[-)\.\s]{0,2}\d{3,4}$/;
 
@@ -16,6 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
   // メールアドレスのインプットタグとエラーメッセージ用のDOM
   const valiMailOn = document.querySelector('.pageDocumentForm__item--mail ');
   const valiMessageMail = document.querySelector('.pageDocumentForm__valiText--mail');
+  // 郵便番号のインプットタグとエラーメッセージ用のDOM
+  const valiPostOn = document.querySelector('.pageDocumentForm__item--post ');
+  const valiMessagePost = document.querySelector('.pageDocumentForm__valiText--post');
 
   function valiCheck(e) {
 
@@ -39,8 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
     displayErrText(e, 'tell', inputTellValue, valiTelOn, valiMessageTel, tellRegex);
 
     // メールアドレスのバリデーション
-    const inputMailValiue = document.querySelector('.pageDocumentForm__itemChoice--valiMail').value;
-    displayErrText(e, 'email', inputMailValiue, valiMailOn, valiMessageMail, mailRegex);
+    const inputMailValue = document.querySelector('.pageDocumentForm__itemChoice--valiMail').value;
+    displayErrText(e, 'email', inputMailValue, valiMailOn, valiMessageMail, mailRegex);
+
+        // 郵便番号のバリデーション
+        const inputPostValue = document.querySelector('.pageDocumentForm__itemChoice--valiPost').value;
+        displayErrText(e, 'post', inputPostValue, valiPostOn, valiMessagePost, postRegex);
 
     // 個人情報の取り扱いについてのバリデーション
     const valiPrivacy = document.querySelector('.pageDocumentForm__valiPrivacy');
