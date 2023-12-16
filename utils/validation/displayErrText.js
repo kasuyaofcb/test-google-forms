@@ -1,7 +1,3 @@
-// 既存のconst文の下に追加
-import * as libphonenumber from 'google-libphonenumber';
-
-
 export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
 	const setErrText = (errText) => {
 		formEle.classList.add("pageForm__item--valiOn");
@@ -31,8 +27,7 @@ export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
 		}
 	}
 	if (type === "tell") {
-		const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
-		if (!phoneUtil.isValidNumber(phoneUtil.parse(val, "JP")) || !val.match(regex)) {
+		if (!libphonenumber.isValidNumber(val, "JP") || !val.match(regex)) {
 			setErrText("正しく入力してください。");
 		} else {
 			formEle.classList.remove("pageForm__item--valiOn");
