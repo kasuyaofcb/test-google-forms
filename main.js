@@ -1,5 +1,5 @@
-import { displayErrText } from '/utils/validation/displayErrText.js';
-import { validateCheckbox } from '/utils/validation/validateCheckbox.js';
+import { displayErrText } from '/test-google-forms/utils/validation/displayErrText.js';
+import { validateCheckbox } from '/test-google-forms/utils/validation/validateCheckbox.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   // 正規表現を定義
