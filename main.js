@@ -4,7 +4,7 @@ import { validateCheckbox } from '/test-google-forms/utils/validation/validateCh
 document.addEventListener('DOMContentLoaded', function () {
   // 正規表現を定義
   const textRegex = /^[ぁ-んァ-ン一-龥々ー ]*$/;
-  const textNoRegex = /^[ぁ-んァ-ン一-龥々ー0-9 ]*$/;
+  const textNoRegex =/^[ぁ-んァ-ン一-龥々ー０-９0-9 ]*$/;
   const mailRegex = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
   const tellRegex = /^\(?\d{2,5}\)?[-(\.\s]{0,2}\d{1,4}[-)\.\s]{0,2}\d{3,4}$/;
 
