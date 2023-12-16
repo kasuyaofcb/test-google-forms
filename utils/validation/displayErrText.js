@@ -1,5 +1,5 @@
 // 既存のconst文の下に追加
-const libphonenumber = require('google-libphonenumber');
+import * as libphonenumber from 'google-libphonenumber';
 
 
 export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
@@ -31,7 +31,8 @@ export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
 		}
 	}
 	if (type === "tell") {
-		if (!libphonenumber.isValidNumber(val, "JP") || !val.match(regex)) {
+		const phoneUtil = libphonenumber.PhoneNumberUtil.getInstance();
+		if (!phoneUtil.isValidNumber(phoneUtil.parse(val, "JP")) || !val.match(regex)) {
 			setErrText("正しく入力してください。");
 		} else {
 			formEle.classList.remove("pageForm__item--valiOn");
