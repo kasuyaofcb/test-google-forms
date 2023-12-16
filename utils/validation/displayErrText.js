@@ -1,3 +1,6 @@
+const libphonenumber = require('google-libphonenumber');
+
+
 export const displayErrText = (event, type, val, formEle, msgEle, regex) => {
 	const setErrText = (errText) => {
 		formEle.classList.add("pageForm__item--valiOn");
